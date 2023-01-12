@@ -6,6 +6,5 @@ class TransactionsController < ApplicationController
 
   def show
     @transactions = Btransaction.find(params[:id])
-
   end
 end

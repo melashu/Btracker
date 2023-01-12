@@ -3,12 +3,11 @@ class CatagoriesController < ApplicationController
   def index; end
 
   def new
-   @catagory = Catagory.new
+    @catagory = Catagory.new
   end
 
   def create
     @catagory = Catagory.new(name: params[:catagory][:name], author: current_user, icon: params[:catagory][:icon])
-
 
     if @catagory.save
       flash[:notice] = 'Successfully created!'

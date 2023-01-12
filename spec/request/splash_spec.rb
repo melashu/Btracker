@@ -1,9 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'Splash', type: :request do
-  
-
-
   it 'should render index page' do
     get '/'
     expect(response).to have_http_status(:ok)
@@ -14,6 +11,4 @@ RSpec.describe 'Splash', type: :request do
     get '/'
     expect(response.body).to include 'Welcome Btracker'
   end
-
-  
 end
