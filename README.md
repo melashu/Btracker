@@ -33,7 +33,8 @@ This project is about building a web application where you can manage your budge
 - Ruby
 - Rails 
 - HTML
-- CSS
+- SCSS
+- Bootstrap
 ## Tech Stack <a name="tech-stack"></a>
 
 > Describe the tech stack and include only the relevant sections that apply to your project.
