@@ -1,0 +1,23 @@
+<h2 class='title'>Add new trasaction </h2>
+<div class='form-container'>
+<%=link_to "BackT", user_catagories_path(current_user), class: 'btn btn-danger' %>
+ <%= form_with model: current_user, url: user_catagory_btransactions_path, method: :post, id:'new-transaction' do |form|%>
+    <div class='field'>
+    <%=form.label :name %>
+    <%=form.text_field :name , required: true%>
+    </div>
+
+    <div class='field'>
+    <%=form.label :amount %>
+    <%=form.number_field :amount, required: true%>
+    </div> 
+
+    <div class='field'>
+     <%=form.label :catagory, "Select Catagory"  %>
+       <%= form.collection_select :catagory, @catagories,:id, :name, required: true, prompt: true%>
+    </div>
+
+
+    <%=form.submit "Save", class: 'button btn-catagory', class: 'btn btn-primary'%>
+ <%end%>
+</div>

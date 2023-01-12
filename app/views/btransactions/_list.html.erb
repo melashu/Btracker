@@ -1,0 +1,12 @@
+
+<%= link_to user_catagory_btransaction_path(current_user, catagory,transaction), class: 'each-catagory' do%>
+  <div class='top'>
+    <%= image_tag transaction.catagories[0].icon, class: 'catagory-img'%>
+    <div class='left'>
+      <p><%=transaction.name%></p>
+      <p><%=transaction.created_at.to_date%></p>
+    </div>
+  </div>
+  <p><%=transaction.amount%></p>
+
+<%end%>

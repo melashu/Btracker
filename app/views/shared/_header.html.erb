@@ -1,0 +1,39 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <%=link_to  'Btracker', root_path, class: 'navbar-brand fs-4'%>
+      <%if user_signed_in?%>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+ 
+    <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarNavDropdown">
+ 
+      <ul class="navbar-nav d-flex align-items-lg-center d-sm-flex justify-content-sm-start">
+        <li class="nav-item">
+      <%=link_to  'Catagories', user_catagories_path(current_user), class: 'nav-link active'%>
+        </li>
+        <li class="nav-item">
+      <%=link_to  'All Transactions', transactions_index_path, class: 'nav-link active'%>
+        </li>
+
+        <li class="nav-item">
+           <span class='nav-link'> Welcome <%=current_user.name%></span> 
+        </li>
+    
+        <li class="nav-item dropdown"> 
+          <% if current_user.photo.attached?%>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           <%= image_tag current_user.photo, class: 'pp-image'%>
+          </a>
+          <%end%>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+           <%= button_to 'Logout', destroy_user_session_path, data: {turbo: false}, method: :delete, class: "btn btn-text" %>
+          </ul>
+        </li>
+      </ul>
+      <%end%>
+    </div>
+  </div>
+</nav>

@@ -33,7 +33,8 @@ This project is about building a web application where you can manage your budge
 - Ruby
 - Rails 
 - HTML
-- CSS
+- SCSS
+- Bootstrap
 ## Tech Stack <a name="tech-stack"></a>
 
 > Describe the tech stack and include only the relevant sections that apply to your project.
@@ -127,6 +128,6 @@ I would like to thank Microverse for the project guidelines.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/shyusu4/OOP-School-Library/blob/dev/MIT.md) licensed.
+This project is [MIT](MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

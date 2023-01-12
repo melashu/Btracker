@@ -1,0 +1,24 @@
+<div class='form-container'>
+<%=link_to "Back", :back, class: 'btn btn-danger'%>
+<h2 class='title'>Add new budget catagory</h2>
+ <%= form_with model: @catagory, url: "/users/#{current_user.id}/catagories", method: :post, id: 'catagory_form' do |form|%>
+    <%if @catagory.errors.any?%>
+        <div class="alert alert-danger alert-dismissable">
+         <%@catagory.errors.full_messages.each do |msg|%>
+         <p><%=msg%></p>
+        <%end%>
+         </div>
+    <%end%>
+    <div class='field'>
+      <%=form.label :Icon, class:'form-label'%>
+      <%=form.file_field :icon, required: true, class:'form-control'%>
+    </div>
+
+    <div class='field'>
+      <%=form.label :name%>
+      <%=form.text_field :name, class: 'form-control'%>
+    </div>
+
+    <%=form.submit "Save", class: 'btn btn-primary'%>
+ <%end%>
+</div>

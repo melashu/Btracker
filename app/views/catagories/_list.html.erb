@@ -1,0 +1,12 @@
+<% current_user.catagories.each do |cata|%>
+ <%= link_to user_catagory_btransactions_path(current_user, cata), class: 'each-catagory' do%>
+   <div class='top'>
+    <%= image_tag cata.icon, class: 'catagory-img'%>
+    <div class='left'>
+    <p><%= cata.name%></p>
+     <p><%= cata.created_at.to_date%></p>
+    </div>
+   </div>
+   <p><%=cata.transaction_amount%></p>
+<%end%>
+<%end%> 
