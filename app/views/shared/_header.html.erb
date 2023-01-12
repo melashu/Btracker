@@ -22,7 +22,7 @@
            <span class='nav-link'> Welcome <%=current_user.name%></span> 
         </li>
     
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown"> 
           <% if current_user.photo.attached?%>
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            <%= image_tag current_user.photo, class: 'pp-image'%>
