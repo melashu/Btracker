@@ -2,7 +2,8 @@
 <h2 class='title'>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <%= render "users/shared/error_messages", resource: resource %>
   <div class="field">
     <%= f.label :Profile_picture,class: 'form-label' %><br />
     <%= f.file_field :photo, class: 'form-control'%>
