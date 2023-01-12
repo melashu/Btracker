@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   # before_action :param_checker
 
   def after_sign_in_path_for(_resource)
-    users_path
+    user_catagories_path(current_user)
   end
 
   def must_log!
