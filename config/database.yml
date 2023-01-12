@@ -24,3 +24,6 @@ test:
   encoding: unicode
   username: postgres
   password: meshu
+production:
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
