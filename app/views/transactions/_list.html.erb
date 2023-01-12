@@ -1,0 +1,11 @@
+
+<%= link_to show_transaction_path(transaction), class: 'each-catagory' do%>
+  <div class='top'>
+    <div class='left'>
+      <p><%=transaction.name%></p>
+      <p><%=transaction.created_at.to_date%></p>
+    </div>
+  </div>
+  <p><%=transaction.amount%></p>
+
+<%end%>

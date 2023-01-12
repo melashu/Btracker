@@ -1,0 +1,22 @@
+
+ <h2 class='title'>Transaction Detail</h2>
+<%=link_to "Back", :back, class: 'btn btn-danger' %>
+ <div class='detail-transaction'>
+
+    <div class='top'>
+        <%= image_tag @transactions.catagories[0].icon, class: 'catagory-img'%>
+        <p><%= @transactions.name%></p>
+    </div>
+
+    <div class='mid'>
+    <p>Transaction Id: <%=@transactions.object_id%></p>
+    <p>Date: <%= @transactions.created_at.to_date%></p>
+    </div>
+
+    <div class='bottom'>
+    <p>Total Payement: </p>
+    <p><%= @transactions.amount%> </p>
+    </div>
+   
+
+  </div>

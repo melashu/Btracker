@@ -1,0 +1,11 @@
+<div class='transaction-container'>
+ <h2 class='title'>All Recent Transactionr</h2>
+<%=link_to "Back", :back, class: 'btn btn-danger' %>
+    <div class='bottom'>
+    <%@transaction.each do |transact|%>
+        <%=render "list", transaction: transact%>
+    <%end%>
+    </div>
+
+
+</div>
