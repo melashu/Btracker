@@ -1,0 +1,17 @@
+<div class='transaction-container'>
+ <h2 class='title'>Most Recent Transactionr</h2>
+<%=link_to "Back", :back, class: 'btn btn-danger' %>
+
+
+  <div class='middle p-4'>
+    <p class='total'>Total transaction</b> </p>
+    <p><%= @catagory.transaction_amount%></p>
+  </div>
+  <div class='bottom'>
+   <%@all_transaction.each do |transact|%>
+     <%=render "list", transaction: transact, catagory: @catagory%>
+   <%end%>
+</div>
+
+<%= link_to "Add a new transaction", new_user_catagory_btransaction_path, class: 'btn btn-primary m-2'%>
+</div>
