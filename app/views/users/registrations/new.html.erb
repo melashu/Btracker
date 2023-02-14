@@ -2,19 +2,18 @@
 <h2 class='title'>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-
   <%= render "users/shared/error_messages", resource: resource %>
   <div class="field">
-    <%= f.label :Profile_picture,class: 'form-label' %><br />
-    <%= f.file_field :photo, class: 'form-control'%>
+    <%= f.label :profile_picture, class: 'form-label' %><br />
+    <%= f.file_field :photo, class: 'form-control', required: true%>
   </div>
     <div class="field">
     <%= f.label :Full_name, class: 'form-label' %><br />
-    <%= f.text_field :name, autofocus: true, class: 'form-control'%>
+    <%= f.text_field :name, autofocus: true, class: 'form-control', required: true %>
   </div>
   <div class="field">
     <%= f.label :email,class: 'form-label' %><br />
-    <%= f.email_field :email, autocomplete: "email", class: 'form-control' %>
+    <%= f.email_field :email, autocomplete: "email", class: 'form-control', required: true %>
   </div>
 
   <div class="field">
