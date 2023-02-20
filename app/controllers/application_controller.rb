@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery prepend: true
   before_action :configure_permitted_parameters, if: :devise_controller?
-  # before_action :param_checker
 
   def after_sign_in_path_for(_resource)
     user_catagories_path(current_user)
