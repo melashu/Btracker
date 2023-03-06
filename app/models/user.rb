@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
-         :confirmable, :trackable
+          :trackable
   has_many :catagories, foreign_key: :author_id
   has_many :btransactions, foreign_key: :author_id
   validates :name, presence: true, length: { maximum: 255 }
