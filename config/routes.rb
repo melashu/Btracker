@@ -14,5 +14,6 @@ Rails.application.routes.draw do
       resources :btransactions
     end
   end
+  
 
 end
