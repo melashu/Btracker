@@ -82,11 +82,24 @@ Clone this repository to your desired folder:
 
 cd `Btracker`
 
+On `config/database.yml` file change your database server
+`username`, `host`, `password` 
+
 ### Usage
 
 To run the project, execute the following command:
 
+`rails db:create db:migrate db:seed`
+
 `rails server` or `rails s`
+
+
+In order to login to the system use 
+
+> Email: meshu109@gmail.com
+<br/>
+> Password: 123456789
+
 
 ### Run tests
 
